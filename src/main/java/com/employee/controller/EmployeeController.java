@@ -45,9 +45,9 @@ public class EmployeeController {
 		return employee;
 	}
 	  @PostMapping("/employee")
-	   public void addUser(@Valid @RequestBody Employee employee ,HttpServletResponse res)
+	   public void addUser(@Valid @RequestBody Employee emp ,HttpServletResponse res)
 	   {
-		   employeeservice.saveEmployee(employee);
+		   employeeservice.saveEmployee(emp);
 		   System.out.println("User saved in the database");
 		   try {
 			res.sendRedirect("/employees");
@@ -56,9 +56,9 @@ public class EmployeeController {
 		}
 	   }
 	  @PutMapping("/employee")
-	  public void UpdateUser(@Valid @RequestBody Employee employee ,HttpServletResponse res)
+	  public void UpdateUser(@Valid @RequestBody Employee emp ,HttpServletResponse res)
 	  {
-	 	   employeeservice.saveEmployee(employee);
+	 	   employeeservice.saveEmployee(emp);
 	 	   System.out.println("employee saved in the database");
 	 	   try {
 	 		res.sendRedirect("/employees");
