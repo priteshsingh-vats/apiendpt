@@ -52,7 +52,7 @@ public class EmployeeController {
 		   try {
 			res.sendRedirect("/employees");
 		} catch (IOException e) {
-			
+			System.out.println("Fail");
 		}
 	   }
 	  @PutMapping("/employee")
@@ -63,7 +63,7 @@ public class EmployeeController {
 	 	   try {
 	 		res.sendRedirect("/employees");
 	 	} catch (IOException e) {
-	 		
+	 		System.out.println("Fail");
 	 	} 
 	  }
 }
